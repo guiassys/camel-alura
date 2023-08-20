@@ -21,7 +21,7 @@ public class RotaPedidos {
 					@Override
 					public void configure() throws Exception {
 						from("file:pedidos")
-						.log("${id}: Transferindo ${file:name} para o diretório saida")
+						.log("${id}: Transferindo ${file:name} para o diretório saida - develop")
 						.to("file:saida");
 					}
 				}
