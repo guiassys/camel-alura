@@ -20,8 +20,9 @@ public class RotaPedidos {
 
 					@Override
 					public void configure() throws Exception {
-						from("file:pedidos").
-								to("file:saida");
+						from("file:pedidos")
+						.log("${id}: Transferindo ${file:name} para o diretório saida")
+						.to("file:saida");
 					}
 				}
 		);
